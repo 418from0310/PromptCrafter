@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Hello World 插件",
+  "version": "1.0",
+  "description": "这是我的第一个 Chrome 插件",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "点击我！"
+  }
+}
